@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box } from "@mui/material";
+import "./App.css";
+import { EduExp } from "./components/EduExp";
+import { PersonalDetails } from "./components/PersonalDetails";
+import { PracExp } from "./components/PracExp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box
+      sx={{
+        bgcolor: "#777",
+        // height: "100vh",
+        width: "100vw",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <Box sx={{ bgcolor: "#fff", my: 3, width: "75%", p: 7 }}>
+        <PersonalDetails />
+        <EduExp />
+        <PracExp />
+      </Box>
+    </Box>
   );
 }
 
